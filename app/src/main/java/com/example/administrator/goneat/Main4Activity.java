@@ -48,6 +48,7 @@ public class Main4Activity extends AppCompatActivity {
 
         Button add = (Button)findViewById(R.id.add);
         Button go = (Button)findViewById(R.id.go);
+        value = (EditText)findViewById(R.id.value);
         Listview = (ListView)findViewById(R.id.list1);
 
         if (!Datas.isEmpty()){
@@ -57,23 +58,23 @@ public class Main4Activity extends AppCompatActivity {
 
         View.OnClickListener buttonlistener = new View.OnClickListener(){
             @Override
-            public  void onClick(View v){
+            public void onClick(View v) {
                 switch (v.getId()){
+
                     case R.id.add:
 
                         if (Datas.isEmpty()){
                             data = value.getText().toString();
 
-                            sql = String.format("INSERT INTO Example VALUES(NULL, '%s');", data);
+                            sql = String.format("INSERT INTO Example VALUES(NULL, '%S');", data);
                             db.execSQL(sql);
 
                             Datas.add(data);
                             Adapter = new ArrayAdapter<String>(Main4Activity.this, android.R.layout.simple_list_item_1, Datas);
                             Listview.setAdapter(Adapter);
-
-                        }else {
+                        }else{
                             data = value.getText().toString();
-                            sql = String.format("INSERT INTO Example VALUES(NULL, '%s');", data);
+                            sql = String.format("INSERT INTO Example VALUES(NULL, '%S');", data);
                             db.execSQL(sql);
                             Datas.add(data);
 

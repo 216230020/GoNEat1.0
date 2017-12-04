@@ -22,7 +22,7 @@
         android:id="@+id/map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="-3dp"
         android:layout_marginLeft="148dp"
         android:layout_x="145dp"
         android:layout_y="379dp"
@@ -34,10 +34,10 @@
 
     <WebView
         android:id="@+id/webView"
-        android:layout_width="331dp"
-        android:layout_height="375dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="384dp"
+        android:layout_height="401dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="65dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
